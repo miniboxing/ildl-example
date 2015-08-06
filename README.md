@@ -1,14 +1,16 @@
 #ildl-example
 <img src="http://scala-miniboxing.org/images/ildl-logo.png" alt="ildl logo" width="150" align="right">
 
-This is an example of using the ildl (data-centric metaprogramming) plugin with your sbt project. 
+This is an example of using [data-centric metaprogramming](http://scala-ildl.org) in your sbt project. 
 
-Example usage:
+To install:
 ```
 $ git clone https://github.com/miniboxing/ildl-example.git
-
 $ cd ildl-example
+```
 
+In the plugin we have an example transformation:
+```
 $ cat src/main/scala/Test.scala 
 import ildl._
 
@@ -42,7 +44,10 @@ object Test {
     println(s"$v1 + $v2 = ${plus2(v1,v2)}")
   }
 }
+```
 
+To run this code:
+```
 $ sbt
 [info] Loading project definition from /mnt/data1/Work/Workspace/dev/ildl-example/project
 [info] Set current project to ildl-example (in build file:/mnt/data1/Work/Workspace/dev/ildl-example/)
@@ -52,3 +57,5 @@ $ sbt
 4 + 5 = 9
 4 + 5 = 42
 ```
+
+The result will be unexpected. To read more about data-centric metaprogramming check out the [`scala-ildl.org` website](http://scala-ildl.org) or the [project wiki](https://github.com/miniboxing/ildl-plugin/wiki).
